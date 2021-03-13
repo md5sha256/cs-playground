@@ -16,10 +16,7 @@ namespace com.gmail.andrewandy.TestProject {
 
         static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
-                .ConfigureServices((_, services) =>
-                    services.AddSingleton<IPrinter, SimplePrinter>()
-                            .AddSingleton<DummyObject, DummyObject>()
-                            );
+                .ConfigureServices(new UtilsModule().Services);
 
     }
 
