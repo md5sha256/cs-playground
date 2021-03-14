@@ -18,11 +18,11 @@ namespace com.gmail.andrewandy.TestProject {
         private readonly IPrinter _printer;
 
         public DummyObject(IPrinter printer) {
-            _printer = printer;
+            this._printer = printer;
         }
 
         public void Test(string arg) {
-            _printer.Print(arg);
+            this._printer.Print(arg);
         }
 
     }

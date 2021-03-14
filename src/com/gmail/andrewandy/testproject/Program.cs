@@ -1,4 +1,5 @@
 using System;
+
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
@@ -14,7 +15,7 @@ namespace com.gmail.andrewandy.TestProject {
             obj.Test("Hello!");
         }
 
-        static IHostBuilder CreateHostBuilder(string[] args) =>
+        private static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureServices(new UtilsModule().Services);
 
